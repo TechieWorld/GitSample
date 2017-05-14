@@ -1,0 +1,393 @@
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample
+$ git init
+Initialized empty Git repository in C:/Users/yogesh.garg/Desktop/GitSample/.git/
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ touch a.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ touch b.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ touch c.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        a.txt
+        b.txt
+        c.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git add .
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git commit -m "first commit"
+[master (root-commit) 5f05485] first commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a.txt
+ create mode 100644 b.txt
+ create mode 100644 c.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git branch
+* master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git branch feature
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git branch
+  feature
+* master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git branch
+* feature
+  master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ ls
+a.txt  b.txt  c.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git branch
+* feature
+  master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ touch d.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git status
+On branch feature
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   d.txt
+
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git status
+On branch feature
+nothing to commit, working tree clean
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ ls
+a.txt  b.txt  c.txt  d.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git checkout master
+Switched to branch 'master'
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ ls
+a.txt  b.txt  c.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git merge master feature
+Updating 5f05485..bc65c66
+Fast-forward
+ d.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ ls
+a.txt  b.txt  c.txt  d.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$
+
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git branch
+* feature
+  master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ ls
+a.txt  b.txt  c.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git branch
+* feature
+  master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ touch d.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git status
+On branch feature
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   d.txt
+
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git status
+On branch feature
+nothing to commit, working tree clean
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ ls
+a.txt  b.txt  c.txt  d.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git checkout master
+Switched to branch 'master'
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ ls
+a.txt  b.txt  c.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git merge master feature
+Updating 5f05485..bc65c66
+Fast-forward
+ d.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ ls
+a.txt  b.txt  c.txt  d.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ clear
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git remote add origin https://github.com/TechieWorld/GitSample.git
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ ls
+a.txt  b.txt  c.txt  d.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git branch
+  feature
+* master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 420 bytes | 0 bytes/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/TechieWorld/GitSample.git
+ * [new branch]      master -> master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git branch
+* feature
+  master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git pull
+Already up-to-date.
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git branch
+* feature
+  master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git status
+On branch feature
+Your branch is up-to-date with 'origin/feature'.
+nothing to commit, working tree clean
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git pull origin master
+From https://github.com/TechieWorld/GitSample
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git branch
+* feature
+  master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git branch
+* feature
+  master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git log
+commit bc65c661ca92fbd4804cc36ea79d6ed81b5a3cbf
+Author: YOGESH\yogesh.garg <coolyogi91@gmail.com>
+Date:   Sun May 14 19:12:26 2017 +0900
+
+    first commit in feature
+
+commit 5f05485fb84aabafb741843c646929126477c43d
+Author: YOGESH\yogesh.garg <coolyogi91@gmail.com>
+Date:   Sun May 14 19:07:53 2017 +0900
+
+    first commit
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git log --pretty=oneline
+bc65c661ca92fbd4804cc36ea79d6ed81b5a3cbf first commit in feature
+5f05485fb84aabafb741843c646929126477c43d first commit
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git show head
+commit bc65c661ca92fbd4804cc36ea79d6ed81b5a3cbf
+Author: YOGESH\yogesh.garg <coolyogi91@gmail.com>
+Date:   Sun May 14 19:12:26 2017 +0900
+
+    first commit in feature
+
+diff --git a/d.txt b/d.txt
+new file mode 100644
+index 0000000..e69de29
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git checkout gead d.txt
+
+error: pathspec 'gead' did not match any file(s) known to git.
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git checkout head d.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git show head
+commit bc65c661ca92fbd4804cc36ea79d6ed81b5a3cbf
+Author: YOGESH\yogesh.garg <coolyogi91@gmail.com>
+Date:   Sun May 14 19:12:26 2017 +0900
+
+    first commit in feature
+
+diff --git a/d.txt b/d.txt
+new file mode 100644
+index 0000000..e69de29
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git branch -d feature
+error: Cannot delete branch 'feature' checked out at 'C:/Users/yogesh.garg/Desktop/GitSample'
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (feature)
+$ git checkout master
+Switched to branch 'master'
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git branch -d feature
+Deleted branch feature (was bc65c66).
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ touch .gitignore
+
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ touch k.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ touch j.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        j.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git add .
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git add .
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git commit -m "ignore file commit"
+[master 37fbf22] ignore file commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/TechieWorld/GitSample.git
+   bc65c66..37fbf22  master -> master
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ touch l.txt
+
+yogesh.garg@Yogesh MINGW64 ~/Desktop/GitSample (master)
+$ git add .
+
